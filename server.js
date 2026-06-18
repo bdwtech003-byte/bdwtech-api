@@ -7,9 +7,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/bdwtech")
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.error(err));
+mongoose.connect(
+"mongodb+srv://USERNAME:PASSWORD@cluster0.xxxxx.mongodb.net/bdwtech"
+)
+.then(() => console.log("MongoDB Atlas Connected"))
+.catch(err => console.error(err));
 const ContactSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
