@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -8,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(
-"mongodb+srv://USERNAME:PASSWORD@cluster0.xxxxx.mongodb.net/bdwtech"
+  "mongodb+srv://bdwtech003_db_user:YOUR_PASSWORD@cluster0.ncgqtar.mongodb.net/bdwtech?retryWrites=true&w=majority"
 )
 .then(() => console.log("MongoDB Atlas Connected"))
 .catch(err => console.error(err));
