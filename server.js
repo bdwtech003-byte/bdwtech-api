@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
+mongoose.connect(process.env.MONGO_URI);
 mongoose.connect(
   "mongodb+srv://bdwtech003_db_user:YOUR_PASSWORD@cluster0.ncgqtar.mongodb.net/bdwtech?retryWrites=true&w=majority"
 )
